@@ -21,14 +21,14 @@ client.once('ready', () => {
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
     })
-    client.user.setActivity("Use U.help for commands.");
 });
 
 client.on('message', message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
-
+    client.user.setActivity("Use U.help for commands.");
+    
     if (command === `ping`) {
     client.commands.get('ping').execute(message, args);
 }
