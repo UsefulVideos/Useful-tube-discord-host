@@ -22,7 +22,7 @@ client.once('ready', () => {
         console.log(" - " + guild.name)
     })
     client.user.setActivity('Use U.help for commands.')
-  .then(presence => console.log(`Activity set to ${presence.activity.name}`))
+  .then(console.log)
   .catch(console.error);
 });
 
