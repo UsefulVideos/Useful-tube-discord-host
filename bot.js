@@ -21,7 +21,6 @@ client.once('ready', () => {
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
     })
-    // client.user.setActivity('Use U.help for commands.');
 });
 
 client.on('message', message => {
