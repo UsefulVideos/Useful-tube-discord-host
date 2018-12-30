@@ -21,7 +21,7 @@ client.once('ready', () => {
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
     })
-     client.user.setActivity(`Serving ${client.guilds.size} servers`);
+     client.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
 client.on('message', message => {
