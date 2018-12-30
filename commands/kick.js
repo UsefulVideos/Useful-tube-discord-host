@@ -9,8 +9,8 @@ module.exports = {
       if (message.author.id === "251050176427327499") {
       let member = message.mentions.members.first();
       let reason = args.slice(1).join(" ");
-      return message.channel.send(`${member} got kicked from the server for: "${reason}".`);
-      member.kick(reason);    
+      member.kick(reason); 
+      return message.channel.send(`${member} got kicked from the server for: "${reason}".`);   
   }
       else message.channel.send(`You do not have permission to kick ${member}.`);
 
