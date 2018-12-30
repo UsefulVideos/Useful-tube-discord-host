@@ -6,10 +6,9 @@ module.exports = {
       if (!message.mentions.users.size) {
       return message.reply('you need to tag a user in order to ban them!');
 }
-      if (executer.hasPermission('BAN_MEMBERS')) {
+      if (message.author().hasPermission('BAN_MEMBERS')) {
       console.log('This member can ban');
       let user = message.mentions.users.first();
-      let executer = message.author();
       let reason = args.slice(1).join(" ");
       guild.ban(user)(reason);          
       return message.channel.send(`${user.username} is succesfully banned from the server for: "${reason}".`);
