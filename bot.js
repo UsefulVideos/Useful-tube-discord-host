@@ -22,7 +22,6 @@ client.once('ready', () => {
         console.log(" - " + guild.name)
     });
     //client.setActivity(`Serving ${client.guilds.size} servers`);
-    guild.defaultRole.setPermissions(['SEND_MESSAGES', 'VIEW_CHANNEL'])
 });
 
 client.on('message', message => {
