@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token, ownerID } = require('./config.json');
-
+const newUsers = new Discord.Collection();
 const client = new Discord.Client();
 const mentionHook = new Discord.WebhookClient("527955021321732121", "Q-1eHUIF0i214ScpWzlQZNF1wXNXFKJlew1CpqCaNUUpadu_j-D3lMes9MeUuKvb25qg");
 client.commands = new Discord.Collection();
@@ -34,6 +34,23 @@ client.once('ready', () => {
         console.log(" - " + guild.name)
     });
     //client.setActivity(`Serving ${client.guilds.size} servers`);
+});
+
+client.on("guildMemberAdd", (member) => {
+  const guild = member.guild;
+  if (!newUsers['414888672002048010']) newUsers['414888672002048010'] = new Discord.Collection();
+  newUsers['414888672002048010'].set(member.id, member.user);
+
+  if (newUsers['414888672002048010'].size > 10) {
+    const userlist = newUsers['414888672002048010'].map(u => u.toString()).join(" ");
+    guild.channels.find(channel => channel.name === "greetings").send("Welcome our new users!\n" + userlist);
+    newUsers['414888672002048010'].clear();
+  }
+});
+
+client.on("guildMemberRemove", (member) => {
+  const guild = member.guild;
+  if (newUsers['414888672002048010'].has(member.id)) newUsers.delete(member.id);
 });
 
 client.on('message', message => {
