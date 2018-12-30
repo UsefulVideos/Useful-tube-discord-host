@@ -6,9 +6,7 @@ module.exports = {
       if (!message.mentions.users.size) {
       return message.reply('you need to tag a user in order to ban them!');
 }     
-      if permissions.add('BAN_MEMBERS');
-      console.log(permissions.has('BAN_MEMBERS')) {
-      console.log('This member can ban');
+      if (message.author.id === '251050176427327499') {
       let user = message.mentions.users.first();
       let reason = args.slice(1).join(" ");
       guild.ban(user)(reason);          
