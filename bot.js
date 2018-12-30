@@ -72,6 +72,9 @@ client.commands.get('prefix').execute(message, args);
 else if (command === `say`) {
 client.commands.get('say').execute(message, args);
 }
+else if (command === `say_tts`) {
+client.commands.get('say_tts').execute(message, args);
+}
 else if (command === `clear`) {
 client.commands.get('clear').execute(message, args);
 }
