@@ -6,6 +6,18 @@ const client = new Discord.Client();
 const mentionHook = new Discord.WebhookClient("527955021321732121", "Q-1eHUIF0i214ScpWzlQZNF1wXNXFKJlew1CpqCaNUUpadu_j-D3lMes9MeUuKvb25qg");
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const { Permissions } = require('discord.js');
+const flags = [
+    'MANAGE_CHANNELS',
+    'EMBED_LINKS',
+    'ATTACH_FILES',
+    'READ_MESSAGE_HISTORY',
+    'MANAGE_ROLES',
+    'KICK_MEMBERS',
+    'BAN_MEMBERS',
+];
+
+const permissions = new Permissions(flags);
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
