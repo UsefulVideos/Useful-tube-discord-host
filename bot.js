@@ -1,7 +1,7 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token, ownerID } = require('./config.json');
-const newUsers = new Discord.Collection();
+const newUsers = [];
 const client = new Discord.Client();
 const mentionHook = new Discord.WebhookClient("527955021321732121", "Q-1eHUIF0i214ScpWzlQZNF1wXNXFKJlew1CpqCaNUUpadu_j-D3lMes9MeUuKvb25qg");
 client.commands = new Discord.Collection();
