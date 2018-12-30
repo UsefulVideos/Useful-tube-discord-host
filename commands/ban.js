@@ -6,7 +6,8 @@ module.exports = {
       if (!message.mentions.users.size) {
       return message.reply('you need to tag a user in order to ban them!');
 }     
-      if console.log(permissions.has('BAN_MEMBERS')) {
+      if permissions.add('BAN_MEMBERS');
+      console.log(permissions.has('BAN_MEMBERS')) {
       console.log('This member can ban');
       let user = message.mentions.users.first();
       let reason = args.slice(1).join(" ");
