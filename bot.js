@@ -12,7 +12,7 @@ for (const file of commandFiles) {
 
     // set a new item in the Collection
     // with the key as the command name and the value as the exported module
-    //client.commands.set(command.name, command);
+    client.commands.set(command.name, command);
 }
 
 client.once('ready', () => {
@@ -21,7 +21,7 @@ client.once('ready', () => {
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
     })
-     client.setActivity(`Serving ${client.guilds.size} servers`);
+     //client.setActivity(`Serving ${client.guilds.size} servers`);
 });
 
 client.on('message', message => {
