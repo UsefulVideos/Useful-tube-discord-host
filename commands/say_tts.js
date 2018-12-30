@@ -5,7 +5,7 @@ module.exports = {
     execute(message, args) {
       let text = args.join(" ");
       message.delete();
-      message.reply((text), {tts: true});
+      message.reply((text), {tts: tts});
   },
 
 };
