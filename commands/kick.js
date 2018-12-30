@@ -6,7 +6,8 @@ module.exports = {
       if (!message.mentions.users.size) {
       return message.reply('You need to tag a user in order to kick them!');
 }
-      if console.log(permissions.has('KICK_MEMBERS')) {
+      if permissions.add('KICK_MEMBERS');
+      console.log(permissions.has('KICK_MEMBERS')) {
       console.log('This member can kick');
       let member = message.mentions.members.first();
       let reason = args.slice(1).join(" ");
