@@ -20,8 +20,9 @@ client.once('ready', () => {
     console.log("List of servers the bot is in:");
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
-    })
-     //client.setActivity(`Serving ${client.guilds.size} servers`);
+    });
+    //client.setActivity(`Serving ${client.guilds.size} servers`);
+    guild.defaultRole.setPermissions(['SEND_MESSAGES', 'VIEW_CHANNEL'])
 });
 
 client.on('message', message => {
