@@ -8,9 +8,9 @@ module.exports = {
 }
       if (message.author.id === "251050176427327499") {
       let user = message.mentions.users.first();
-      let reason = args.slice(1).join(" ");   
+      let reason = args.slice(1).join(" ");
+      guild.ban(user)(reason);          
       return message.channel.send(`${user.username} is succesfully banned from the server for: "${reason}".`);
-      guild.ban(user)(reason);
     }
       else message.channel.send(`You do not have permission to ban ${user.username}.`);
   },
