@@ -3,6 +3,6 @@ module.exports = {
     description: 'Server!',
     guildOnly: true,
     execute(message, args) {
-        message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
+        message.channel.send(`Server name: ${message.guild.name}\nServer owner: ${message.guild.owner_id}\nTotal members: ${message.guild.memberCount}`);
     },
 };
