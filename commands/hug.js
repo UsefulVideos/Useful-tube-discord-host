@@ -11,7 +11,8 @@ module.exports = {
         message.channel.send(`:heart: Hey ${member}! ${message.author} sent you a hug. :heart:`, {files: ["https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif"]});
         message.delete();
         }
-        else message.channel.send(`Sorry ${message.author}! But you cannot hug yourself!n/Try again with a different member. :frowning2:`, {files: ["https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif"]});
+        else message.channel.send(`Sorry ${message.author}! But you cannot hug yourself!n/Try again with a different member. :frowning2:`);
+		message.delete();
         
     },
 };
