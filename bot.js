@@ -1,6 +1,12 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix, token, ownerID } = require('./config.json');
+// Importing this allows you to access the environment variables of the running node process
+require('dotenv').config();
+// "process.env" accesses the environment variables for the running node process. PREFIX is the environment variable you defined in your .env file
+const prefix = process.env.PREFIX;
+const token = process.env.BOT_TOKEN;
+const ownerid = process.env.OWNER_ID;
+const { process.env.PREFIX, process.env.(BOT_TOKEN), process.env.(OWNER_ID) } = require('./config.env');
 const client = new Discord.Client();
 const mentionHook = new Discord.WebhookClient("527955021321732121", "Q-1eHUIF0i214ScpWzlQZNF1wXNXFKJlew1CpqCaNUUpadu_j-D3lMes9MeUuKvb25qg");
 client.commands = new Discord.Collection();
