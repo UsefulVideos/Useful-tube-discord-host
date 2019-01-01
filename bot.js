@@ -6,7 +6,6 @@ require('dotenv').config();
 const prefix = process.env.PREFIX;
 const token = process.env.BOT_TOKEN;
 const ownerid = process.env.OWNER_ID;
-const { process.env.PREFIX, process.env.(BOT_TOKEN), process.env.(OWNER_ID) } = require('./config.env');
 const client = new Discord.Client();
 const mentionHook = new Discord.WebhookClient("527955021321732121", "Q-1eHUIF0i214ScpWzlQZNF1wXNXFKJlew1CpqCaNUUpadu_j-D3lMes9MeUuKvb25qg");
 client.commands = new Discord.Collection();
