@@ -100,8 +100,9 @@ else if (command === `renamebot`) {
    }
   // If that command doesn't exist, sends the message that the command is invalid
     const cmd = client.commands.get(command);
-    if (!cmd) return;
-    message.channel.send(`The command you provided is invalid. Use ${prefix}help.`);
+    if (!cmd) {
+    return message.channel.send(`The command you provided is invalid. Use ${prefix}help.`);
+    }
 });
 
 client.login(token);
