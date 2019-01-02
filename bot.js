@@ -25,7 +25,6 @@ for (const file of commandFiles) {
     // set a new item in the Collection
     // with the key as the command name and the value as the exported module
     client.commands.set(command.name, command);
-    const cmd = client.commands.get(command);
 }
 
 client.once('ready', () => {
@@ -100,9 +99,9 @@ else if (command === `renamebot`) {
        client.commands.get('avatar').execute(message, args);
    }
   // If that command doesn't exist, sends the message that the command is invalid
-  else if (!cmd) {
-    return message.channel.send(`The command you provided is invalid. Use ${prefix}help.`);
-  }
+    const cmd = client.commands.get(command);
+    if (!cmd) return;
+    message.channel.send(`The command you provided is invalid. Use ${prefix}help.`);
 });
 
 client.login(token);
