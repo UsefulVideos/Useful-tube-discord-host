@@ -36,7 +36,7 @@ client.once('ready', () => {
         console.log(" - " + guild.name)
     });
     //client.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setActivity('Use U.help for commands.');
+    client.user.setGame('Use U.help for commands.');
 });
 
 client.on('message', message => {
