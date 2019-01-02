@@ -18,7 +18,7 @@ const flags = [
     'KICK_MEMBERS',
     'BAN_MEMBERS',
 ];
-
+const setGame = setActivity;
 const permissions = new Permissions(flags);
 
 for (const file of commandFiles) {
