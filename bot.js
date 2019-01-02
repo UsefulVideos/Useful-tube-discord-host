@@ -18,7 +18,6 @@ const flags = [
     'KICK_MEMBERS',
     'BAN_MEMBERS',
 ];
-const setGame = setActivity;
 const permissions = new Permissions(flags);
 
 for (const file of commandFiles) {
@@ -35,8 +34,8 @@ client.once('ready', () => {
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
     });
-    //client.setActivity(`Serving ${client.guilds.size} servers`);
-    client.user.setGame('Use U.help for commands.');
+    //client.user.setActivity(`Serving ${client.guilds.size} servers`);
+    //client.user.setActivity("Use U.help for commands.");
 });
 
 client.on('message', message => {
