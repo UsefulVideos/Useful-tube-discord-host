@@ -16,6 +16,6 @@ module.exports = {
 //    .setTimestamp()
 //    .setFooter('The prefix is "U." for your pleasure.', 'https://cdn.discordapp.com/app-icons/347332147591512064/8dd5e1f4a7d4507328f49747ca558d54.png?size=64');
 //message.channel.send(exampleEmbed);
-       message.channel.send(`**Commands:**` ` ```${prefix}ping \n${prefix}avatar \n${prefix}beep \n${prefix}prefix \n${prefix}server \n${prefix}hug \n${prefix}say <content> \n${prefix}user-info \n${prefix}help \n${prefix}ban <reason> (BOT OWNER ONLY) \n${prefix}kick <reason> (BOT OWNER ONLY) \n${prefix}renamebot (BOT OWNER ONLY)``` `);
+       message.channel.send(`**Commands:** \```${prefix}ping \n${prefix}avatar \n${prefix}beep \n${prefix}prefix \n${prefix}server \n${prefix}hug \n${prefix}say <content> \n${prefix}user-info \n${prefix}help \n${prefix}ban <reason> (BOT OWNER ONLY) \n${prefix}kick <reason> (BOT OWNER ONLY) \n${prefix}renamebot (BOT OWNER ONLY)``` `);
     },
 };
