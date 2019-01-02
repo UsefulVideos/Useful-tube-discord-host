@@ -101,7 +101,7 @@ else if (command === `renamebot`) {
    }
   // If that command doesn't exist, sends the message that the command is invalid
   else if (!command_key) {
-    return message.channel.send(`The command you provided is invalid. /nUse ${prefix}help.`);
+    return message.channel.send(`The command you provided is invalid. Use ${prefix}help.`);
   }
 });
 
