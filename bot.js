@@ -5,7 +5,6 @@ const prefix = process.env.PREFIX;
 const token = process.env.BOT_TOKEN;
 const ownerid = process.env.OWNER_ID;
 const client = new Discord.Client();
-const mentionHook = new Discord.WebhookClient("527955021321732121", "Q-1eHUIF0i214ScpWzlQZNF1wXNXFKJlew1CpqCaNUUpadu_j-D3lMes9MeUuKvb25qg");
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const { Permissions } = require('discord.js');
@@ -26,6 +25,7 @@ for (const file of commandFiles) {
     // set a new item in the Collection
     // with the key as the command name and the value as the exported module
     client.commands.set(command.name, command);
+    const command_key = client.commands.get(command);
 }
 
 client.once('ready', () => {
@@ -99,7 +99,10 @@ else if (command === `renamebot`) {
     else if (command === 'avatar') {
        client.commands.get('avatar').execute(message, args);
    }
-
+  // If that command doesn't exist, silently exit and do nothing
+  if (!command_key) return {
+    message.channel.send(`The command you provided is invalid. /nUse ${prefix}help.`);
+  }
 });
 
 client.login(token);
