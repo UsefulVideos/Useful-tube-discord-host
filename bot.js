@@ -99,9 +99,9 @@ else if (command === `renamebot`) {
     else if (command === 'avatar') {
        client.commands.get('avatar').execute(message, args);
    }
-  // If that command doesn't exist, silently exit and do nothing
-  if (!command_key) return {
-    message.channel.send(`The command you provided is invalid. /nUse ${prefix}help.`);
+  // If that command doesn't exist, sends the message that the command is invalid
+  else if (!command_key) {
+    return message.channel.send(`The command you provided is invalid. /nUse ${prefix}help.`);
   }
 });
 
