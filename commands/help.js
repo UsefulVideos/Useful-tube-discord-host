@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const prefix = process.env.PREFIX;
 module.exports = {
     name: 'help',
     description: 'Lists all commands.',
