@@ -1,7 +1,6 @@
 const second_prefix = process.env.SECOND_PREFIX;
 const incorrectletter = ["A", "B", "C", "D", "F"];
 const letters = ["A", "B", "C", "D", "E", "F"];
-const correctletter = ["E"];
 module.exports = {
     name: 'quack',
     description: 'Quack',
