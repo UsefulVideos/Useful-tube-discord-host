@@ -61,6 +61,9 @@ client.on('message', message => {
     else if (command === 'server') {
     client.commands.get('server').execute(message, args);
 }
+    else if (command === 'answer') {
+    client.commands.get('answer').execute(message, args);
+}
 else if (command === ``) {
 client.commands.get('no-command').execute(message, args);
 }
