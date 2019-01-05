@@ -1,5 +1,5 @@
 const prefix = process.env.PREFIX;
-const incorrectletter = ["A", "B", "C", "D"];
+const incorrectletter = ["A", "B", "C", "D", "F"];
 module.exports = {
     name: 'quack',
     description: 'Quack',
