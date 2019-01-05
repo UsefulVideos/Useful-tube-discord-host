@@ -73,9 +73,6 @@ client.commands.get('prefix').execute(message, args);
 else if (command === `say`) {
 client.commands.get('say').execute(message, args);
 }
-else if (command === `say_tts`) {
-client.commands.get('say_tts').execute(message, args);
-}
 else if (command === `clear`) {
 client.commands.get('clear').execute(message, args);
 }
@@ -98,6 +95,19 @@ else if (command === `renamebot`) {
     else if (command === 'avatar') {
        client.commands.get('avatar').execute(message, args);
    }
+// FUN/JOKE COMMANDS
+else if (command === `quack`) {
+client.commands.get('quack').execute(message, args);
+}
+else if (command === `holographic`) {
+client.commands.get('holographic').execute(message, args);
+}
+else if (command === `hello`) {
+client.commands.get('hello').execute(message, args);
+}
+else if (command === `options`) {
+client.commands.get('options').execute(message, args);
+}
   // If that command doesn't exist, sends the message that the command is invalid
     const cmd = client.commands.get(command);
     if (!cmd) {
