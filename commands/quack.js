@@ -14,7 +14,8 @@ module.exports = {
         message.channel.send("**D.** Their glossiness. Their glossiness or shininess is much alike.");
         message.channel.send("**E.** Their material and texture. Their material is something solid that can be cut but doesn't hurt.");
         message.channel.send("**D.** Their fluids. They are both made of the same fluid that the animal body depends on.");
-        if (message.content.startsWith(prefix + "E")) {
+        message.channel.send(`To answer the question, please type in this form: \```${prefix}answer <letter>````);
+        if (message.content.startsWith(prefix + "answer E")) {
          message.channel.send("Congrats! For getting the correct answer, **E**!");
        }
        else {
