@@ -19,5 +19,8 @@ module.exports = {
        else if (message.content === second_prefix + "answer" + incorrectletter) {
         message.channel.send("Incorrect, the correct answer to the question is actually **E**! \nI guess you did not realise what nails and duck beaks have the most in common.");
        }
+        if (message.content !== second_prefix + "answer" + letters) {
+         message.channel.send("Sorry but your answer is invalid.");
+         }
     },
 };
