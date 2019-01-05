@@ -1,5 +1,4 @@
 const second_prefix = process.env.SECOND_PREFIX;
-const incorrectletter = ["A", "B", "C", "D", "F"];
 const letters = ["A", "B", "C", "D", "E", "F"];
 module.exports = {
     name: 'quack',
@@ -15,7 +14,7 @@ module.exports = {
         if (message.content === `${second_prefix}answer E`) {
          message.channel.send("Congrats! For getting the correct answer, **E**!");
          }
-       else if (message.content === `${second_prefix}answer ${incorrectletter}`) {
+       else {
         message.channel.send("Incorrect, the correct answer to the question is actually **E**! \nI guess you did not realise what nails and duck beaks have the most in common.");
        }
         if (message.content !== `${second_prefix}answer ${letters}`) {
