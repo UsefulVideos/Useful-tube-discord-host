@@ -12,6 +12,5 @@ module.exports = {
   }
   else
   message.channel.send(`**BOT OWNER ONLY!**`);
-}
-    },
+  },
 };
