@@ -81,13 +81,7 @@ else if (command === `hug`) {
 client.commands.get('hug').execute(message, args);
 }
 else if (command === `renamebot`) {
-  if (message.author.id === ownerid) {
-  let text = args.join(" ");
-  client.user.setUsername(text);
-  message.delete();
-  }
-  else
-  message.channel.send(`**BOT OWNER ONLY!**`);
+client.commands.get('renamebot').execute(message, args);
 }
     else if (command === 'args-info') {
       (!args.length)
