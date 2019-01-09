@@ -43,6 +43,10 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     
+    if (command.guildOnly && message.channel.type !== 'text') {
+    return message.reply('I can\'t execute that command inside DMs!');
+}
+    
     if (command === `ping`) {
     client.commands.get('ping').execute(message, args);
 }
