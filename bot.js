@@ -81,7 +81,7 @@ else if (command === `hug`) {
 client.commands.get('hug').execute(message, args);
 }
 else if (command === `renamebot`) {
-  if (message.author.id === "251050176427327499") {
+  if (message.author.id === ownerid) {
   let text = args.join(" ");
   client.user.setUsername(text);
   message.delete();
