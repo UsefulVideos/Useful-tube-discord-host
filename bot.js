@@ -39,7 +39,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if (!message.content.startsWith(prefix) || !message.content.startsWith(second_prefix) || message.author.bot) return;
+    if (!message.content.startsWith(prefix) || message.author.bot || !message.content.startsWith(second_prefix)) return;
     const args = message.content.slice(prefix.length).split(/ +/) || message.content.slice(second_prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     
