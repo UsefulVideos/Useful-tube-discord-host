@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const client = new Discord.Client();
 const ownerid = process.env.OWNER_ID;
 module.exports = {
