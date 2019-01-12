@@ -2,7 +2,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 // "process.env" accesses the environment variables for the running node process. PREFIX is the environment variable you defined in your .env file
 const prefix = process.env.PREFIX;
-const second_prefix = process.env.SECOND_PREFIX;
+const sprefix = process.env.SECOND_PREFIX;
 const token = process.env.BOT_TOKEN;
 const ownerid = process.env.OWNER_ID;
 const client = new Discord.Client();
@@ -35,11 +35,11 @@ client.once('ready', () => {
         console.log(" - " + guild.name)
     });
     //client.user.setActivity(`Serving ${client.guilds.size} servers`);
-    //client.user.setActivity("Use U.help for commands.");
+    //client.user.setActivity(`Use ${prefix}help for commands.`);
 });
 
 client.on('message', message => {
-    if (!message.content.startsWith(prefix) || message.author.bot) return;  
+    if (!message.content.startsWith(prefix) || !message.content.startsWith(sprefix) || message.author.bot) return;  
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     
