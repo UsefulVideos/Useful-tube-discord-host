@@ -4,7 +4,7 @@ module.exports = {
     guildOnly: true,
     execute(message, args) {
         let user = message.mentions.users.first();
-        if (user != message.author) {
+        if (user) {
         message.channel.send(`${message.author}, it seems that you pinged ${user}.`);
         } else
         if (!user) {
