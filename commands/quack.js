@@ -12,7 +12,8 @@ module.exports = {
         message.channel.send(`To answer the question, please type in this form: \n**${second_prefix}answer <letter>** `);
         if (message.content === second_prefix + 'answer E') {
          message.channel.send("Congrats! For getting the correct answer, **E**!");
-         }
+            
        else message.channel.send("Incorrect, the correct answer to the question is actually **E**! \nI guess you did not realise what nails and duck beaks have the most in common.");
-    },
+     }
+   },
 };
