@@ -3,6 +3,12 @@ module.exports = {
     description: 'Ping!',
     guildOnly: true,
     execute(message, args) {
-        message.channel.send("Your message took " + new Date().getTime() - message.createdTimestamp + " ms to send."); 
+        let user = message.mentions.users.first();
+        if (user) {
+        message.channel.send("LOOK OVER HERE " + user);
+        } else
+        if (!user) {
+message.channel.send("You must provide a valid user to mention");
+        }
     },
 };
