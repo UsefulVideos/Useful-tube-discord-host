@@ -36,6 +36,7 @@ client.once('ready', () => {
     });
     //client.user.setActivity(`Serving ${client.guilds.size} servers`);
     //client.user.setActivity(`Use ${prefix}help for commands.`);
+      client.user.setPresence({ status: 'online', game: { name: `Use ${prefix}help for commands.` } });
 });
 
 client.on('message', message => {
