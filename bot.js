@@ -107,9 +107,7 @@ client.commands.get('hello').execute(message, args);
 else if (command === `options`) {
 client.commands.get('options').execute(message, args);
 }
-  // If that command doesn't exist, sends the message that the command is invalid
-    const cmd = client.commands.get(command);
-    if (!cmd) {
+    if (!command) {
     return message.channel.send(`The command you provided is invalid. Use ${prefix}help.`);
     }
 });
