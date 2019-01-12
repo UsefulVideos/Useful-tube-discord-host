@@ -10,7 +10,7 @@ module.exports = {
         if (!user) {
 message.channel.send("Please provide a valid user to mention, otherwise i don't understand how to help you. :worried:");
         } else
-        if (user == message.author) {
+        if (user == message.author) return {
         message.channel.send(`${message.author}, i am sorry but you cannot execute this command to yourself.  :worried:`);
         }
     },
