@@ -7,9 +7,9 @@ module.exports = {
     guildOnly: false,
     execute(message, args) {
        message.channel.send("**Regular Commands:**");
-       message.channel.send(" ```U.ping \nU.avatar \nU.beep \nU.prefix \nU.server \nU.hug \nU.say <content> \nU.user-info \nU.help \nU.ban <reason> (BOT OWNER ONLY) \nU.kick <reason> (BOT OWNER ONLY) \nU.renamebot (BOT OWNER ONLY)``` ");
+       message.channel.send(" ```P.ping \nP.avatar \nP.beep \nP.prefix \nP.server \nP.hug \nP.say <content> \nP.user-info \nP.help \nP.ban <reason> (BOT OWNER ONLY) \nP.kick <reason> (BOT OWNER ONLY) \nP.renamebot (BOT OWNER ONLY)``` ");
        message.channel.send("**Random Commands:**");
-       message.channel.send(" ```U.quack \nU.holographic \nU.hello \nU.options``` "); 
+       message.channel.send(" ```P.quack \nP.holographic \nP.hello \nP.options``` "); 
        message.channel.send("*In case of issues, please contact the bot owner. Thank you for reading!*");
     },
 };
