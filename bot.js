@@ -107,7 +107,7 @@ client.commands.get('hello').execute(message, args);
 else if (command === `options`) {
 client.commands.get('options').execute(message, args);
 }
-    if (!command) {
+    if (command !== commandFiles) {
     return message.channel.send(`The command you provided is invalid. Use ${prefix}help.`);
     }
 });
