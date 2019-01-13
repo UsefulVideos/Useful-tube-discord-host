@@ -1,3 +1,8 @@
+const rando_imgs = [
+'https://thumbs.gfycat.com/ZigzagWellwornLiger-max-1mb.gif',
+'https://media.giphy.com/media/3qs0gEngbKHoN0YPGI/giphy.gif',
+'https://media3.giphy.com/media/Q1d6smSTnvOh2/giphy.gif',
+]
 module.exports = {
     name: 'hug',
     description: 'Hug!',
@@ -13,7 +18,7 @@ module.exports = {
 	
         else if (message.author !== message.mentions.members) {
 	let member = message.mentions.members.first();
-        message.channel.send(`:heart: Hey ${member}! ${message.author} sent you a hug. :heart:`, {files: ["https://media.giphy.com/media/8tpiC1JAYVMFq/giphy.gif"]});
+        message.channel.send(`:heart: Hey ${member}! ${message.author} sent you a hug. :heart:`, {file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]});
         message.delete();
        }
     },
