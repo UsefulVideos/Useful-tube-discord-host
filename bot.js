@@ -35,7 +35,8 @@ client.once('ready', () => {
         console.log(" - " + guild.name)
     });
     //client.user.setActivity(`Serving ${client.guilds.size} servers`);
-      client.user.setPresence({ status: 'dnd', game: { name: `Use ${prefix}help for commands \nI am on ${client.guilds.size} servers`, type: 0 } });
+      client.user.setStatus('dnd');
+      client.user.setPresence({ game: { name: `Use ${prefix}help for commands. On ${client.guilds.size} servers.`, type: 0 } });
     
 });
 
