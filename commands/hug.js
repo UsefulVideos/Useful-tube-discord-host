@@ -11,7 +11,7 @@ module.exports = {
         if (!message.mentions.users.size) {
         return message.reply('you need to tag a user in order to hug them!');
 }
-        if (message.author === message.mentions.members) {
+        if (message.author == message.mentions.members) {
         message.channel.send(`Sorry ${message.author}! But you cannot hug yourself!n/Try again with a different member. :frowning2:`);
 		message.delete();
         }
