@@ -41,8 +41,8 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-    if (!message.content.startsWith(prefix, sprefix) || message.author.bot) return;  
-    const args = message.content.slice(prefix.length, sprefix.length).split(/ +/);
+    if (!message.content.startsWith(prefix) || message.author.bot) return;  
+    const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     
     if (command.guildOnly && message.channel.type !== 'text') {
