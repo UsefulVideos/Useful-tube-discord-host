@@ -18,7 +18,7 @@ module.exports = {
 	
         else if (message.author !== message.mentions.members) {
 	let member = message.mentions.members.first();
-        message.channel.send(`:heart: Hey ${member}! ${message.author} sent you a hug. :heart:`, {files: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]});
+        message.channel.send(`:heart: Hey ${member}! ${message.author} sent you a hug. :heart:`, {file: rando_imgs[Math.floor(Math.random() * rando_imgs.length)]});
         message.delete();
        }
     },
