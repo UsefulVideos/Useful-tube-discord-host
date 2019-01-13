@@ -1,4 +1,5 @@
 const faulty_letters = ['A', 'B', 'C', 'D', 'F'];
+const sprefix = process.env.SECOND_PREFIX;
 module.exports = {
     name: 'quack',
     description: 'Quack',
