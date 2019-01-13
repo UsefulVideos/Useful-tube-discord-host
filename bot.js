@@ -42,7 +42,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
     if (!message.content.startsWith(prefix, sprefix) || message.author.bot) return;  
-    const args = message.content.slice(prefix.length).split(/ +/);
+    const args = message.content.slice(prefix.length, sprefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     
     if (command.guildOnly && message.channel.type !== 'text') {
@@ -89,12 +89,8 @@ client.commands.get('hug').execute(message, args);
 else if (command === `renamebot`) {
 client.commands.get('renamebot').execute(message, args);
 }
-    else if (command === 'args-info') {
-      (!args.length)
-        return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
-    }
-    else if (command === 'avatar') {
-       client.commands.get('avatar').execute(message, args);
+else if (command === 'avatar') {
+client.commands.get('avatar').execute(message, args);
    }
 // FUN/JOKE COMMANDS
 else if (command === `quack`) {
