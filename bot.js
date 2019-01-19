@@ -29,7 +29,7 @@ for (const file of commandFiles) {
 }
 
 client.once('ready', () => {
-    console.log('The bot "UseBot" is now online.');
+    console.log(`The bot "${guild.name}" is now online.`);
     console.log("List of servers the bot is in:");
     client.guilds.forEach((guild) => {
         console.log(" - " + guild.name)
