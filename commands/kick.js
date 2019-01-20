@@ -18,9 +18,8 @@ module.exports = {
       return message.channel.send("I cannot kick this user! Do they have a higher role? Do I have kick permissions?");
       let reason = args.slice(1).join(" ");
       if(!reason) reason = "No reason provided";
-      await member.kick(reason)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
-    message.channel.send(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
+      member.kick(reason);
+      message.channel.send(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
     }
   },
 };
