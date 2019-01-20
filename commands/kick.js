@@ -1,4 +1,3 @@
-const member = message.mentions.members;
 module.exports = {
     name: 'kick',
     description: 'kick user',
