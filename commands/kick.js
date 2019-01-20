@@ -1,3 +1,4 @@
+const member = message.mentions.members;
 module.exports = {
     name: 'kick',
     description: 'kick user',
@@ -6,7 +7,7 @@ module.exports = {
       if (!message.mentions.members.size) {
       return message.reply('You need to tag a user in order to kick them!');
 }
-      if (message.author.id === '251050176427327499') {
+      if (member.hasPermission('KICK_MEMBERS')) {
       let member = message.mentions.members.first();
       let reason = args.slice(1).join(" ");
       member.kick(reason); 
