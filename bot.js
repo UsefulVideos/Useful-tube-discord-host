@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 const prefix = process.env.PREFIX || ['p.'];
 const ownerid = process.env.OWNER_ID;
 const client = new Discord.Client();
+const token = process.env.BOT_TOKEN;
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const { Permissions } = require('discord.js');
