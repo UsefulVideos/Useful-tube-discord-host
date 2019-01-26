@@ -12,7 +12,7 @@ module.exports = {
        //message.channel.send(" ```P.quack \nP.holographic \nP.hello \nP.options``` "); 
        //message.channel.send("*In case of issues, please contact the bot owner. Thank you for reading!*");
        
-       const Embed = new Discord.RichEmbed().setTitle('PresentBot Help').setDescription('Welcome to the list of commands!').addField('**Regular Commands**').addBlankField().addField(`${prefix}ping \n${prefix}avatar \n${prefix}beep \n${prefix}prefix \n${prefix}server \n${prefix}hug \n${prefix}say <content> \n${prefix}user-info \n${prefix}help \n${prefix}ban <reason> (BOT OWNER ONLY) \n${prefix}kick <reason> (BOT OWNER ONLY) \n${prefix}renamebot (BOT OWNER ONLY)`).addBlankField().addField('**Random Commands**').addField(`${prefix}quack \n${prefix}holographic \n${prefix}hello \n${prefix}options`).setFooter(`*In case of issues, please contact the bot owner. Thank you for reading!*`);
+       const Embed = new Discord.RichEmbed().setTitle('PresentBot Help').setDescription('Welcome to the list of commands!').addField('**Regular Commands**', true).addBlankField().addField(`${prefix}ping \n${prefix}avatar \n${prefix}beep \n${prefix}prefix \n${prefix}server \n${prefix}hug \n${prefix}say <content> \n${prefix}user-info \n${prefix}help \n${prefix}ban <reason> (BOT OWNER ONLY) \n${prefix}kick <reason> (BOT OWNER ONLY) \n${prefix}renamebot (BOT OWNER ONLY)`, true).addBlankField().addField('**Random Commands**', true).addField(`${prefix}quack \n${prefix}holographic \n${prefix}hello \n${prefix}options`, true).setFooter(`In case of issues, please contact the bot owner. Thank you for reading!`);
         message.channel.send({embed:Embed});
     },
 };
