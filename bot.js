@@ -104,6 +104,12 @@ client.commands.get('hello').execute(message, args);
 else if (command === `options`) {
 client.commands.get('options').execute(message, args);
 }
+else if (message.content === `answer E`) {
+message.channel.send("Congrats! For getting the correct answer, **E**!");
+} else
+if (message.content === `answer ` + faulty_letters) {
+message.channel.send("Incorrect, the correct answer to the question is actually **E**! \nI guess you did not realise what nails and duck beaks have the most in common.");
+}
 });
 
 client.login(token);
