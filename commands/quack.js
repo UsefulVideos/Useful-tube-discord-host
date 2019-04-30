@@ -1,5 +1,4 @@
-const faulty_letters = ['A', 'B', 'C', 'D', 'F'];
-const sprefix = process.env.SECOND_PREFIX;
+const faulty_letters = ['A' || 'B' || 'C' || 'D' || 'F'];
 const prefix = process.env.PREFIX;
 module.exports = {
     name: 'quack',
@@ -17,10 +16,10 @@ module.exports = {
  //     if (message.content == `${sprefix}answer ` + faulty_letters) {
  //      message.channel.send("Incorrect, the correct answer to the question is actually **E**! \nI guess you did not realise what nails and duck beaks have the most in common.");
 //   }
-        if (message.content.slice(prefix.length) === `${sprefix}answer E`) {
+        if (message.content.slice(prefix.length) === `${prefix}answer E`) {
          message.channel.send("Congrats! For getting the correct answer, **E**!");
         } else
-        if (message.content.slice(prefix.length) === `${sprefix}answer ` + faulty_letters) {
+        if (message.content.slice(prefix.length) === `${prefix}answer ` + faulty_letters) {
          message.channel.send("Incorrect, the correct answer to the question is actually **E**! \nI guess you did not realise what nails and duck beaks have the most in common.");
      }
     },
